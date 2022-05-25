@@ -1,15 +1,28 @@
+  <div class="todo">
+
   <div>
+    <div>Todo</div>
+    <div><img [src]="mode[modeSelected].img_switch"></div>
+  </div>
+     
+  <div>
+    <input type="checkbox" name="" id="">
+    <input type="text" placeholder="Digit a new work todo">
+  </div>
 
-  
-  Todo
+    <div *ngFor="let item of items">
+      <input type="checkbox" name="" id="" [checked]="item.isComplete">
+      <input type="text" readonly [value]="item.description">
+    </div>
 
-  <!-- Add dynamic number --> items left
+<div class="attribution">
+  <div>{{getItemsLeft()}} items left</div>
+  <div><a>All</a></div>
+  <div>Active </div>
+  <div>Completed</div>
+  <div>Clear Completed</div>
+</div>
 
-  All
-  Active 
-  Completed
-
-  Clear Completed
 
   Drag and drop to reorder list
 </div>
