@@ -1,0 +1,57 @@
+@import '../../assets/styles/basics.scss';
+@import '../../assets/styles/dark.scss';
+@import '../../assets/styles/light.scss';
+
+    body {
+      font-size: $font_size;
+      font-weight: $font_weight;
+    }
+
+    input:checked{
+      background-color: $Bright_Blue;
+    }
+
+    input:hover{
+      background-color: $Check_Background;
+    }
+
+    .todo{
+      background-color: $Very_Dark_Grayish_Blue;
+    }
+
+    .todo_dark{
+        background-color: $Very_Dark_Grayish_Blue;
+      }
+
+    .todo_light{
+       background-color: $Very_Light_Grayish_Blue;
+    }
+
+
+
+    .attribution { font-size: 11px; text-align: center;  }
+    .attribution a { color: hsl(228, 45%, 44%); cursor: pointer;}
+    .attribution a:hover { color: whitesmoke; cursor: pointer;}
+
+    .center-screen {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .align-flex-start {
+      align-items: flex-start;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .container {
+      display: flex;
+      margin: 5px;
+      border: 1px dotted black;
+    }
+/*--Align-itemns*/
+    .justify.space-between {
+      justify-content: space-between;
+    }

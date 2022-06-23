@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
   modeSelected=0;
@@ -56,6 +56,10 @@ export class TodoComponent implements OnInit {
         count--;
     }
     return count;
+  }
+
+  changeMode(){
+    this.modeSelected=(this.modeSelected===0?1:0);
   }
 
 }

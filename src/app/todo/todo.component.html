@@ -1,8 +1,8 @@
-  <div class="todo">
+  <div [ngClass]="modeSelected===0 ? 'todo_dark' : 'todo_light' ">
 
   <div class="container center-screen">
     <span>Todo</span>
-    <img [src]="mode[modeSelected].img_switch">
+    <img [src]="mode[modeSelected].img_switch" (click)="changeMode()">
   </div>
      
   <div class="container center-screen column">
@@ -17,7 +17,7 @@
       </div>
   </div>
   
-<div class="attribution container2">
+<div class="attribution container">
   <div class="item1">{{getItemsLeft()}} items left</div>
   <div class="item2"><a>All</a></div>
   <div class="item3">Active </div>
