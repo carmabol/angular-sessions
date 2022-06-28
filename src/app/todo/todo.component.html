@@ -1,6 +1,6 @@
   <div [ngClass]="modeSelected===0 ? 'todo_dark' : 'todo_light' ">
 
-  <div class="container center-screen">
+  <div class="container center-screen" [ngClass]="{'todoImageDarkDesktop': modeSelected===1, 'todoImageLightDesktop': modeSelected===0 }" style="background-image: url({{mode[modeSelected].img_bg}})">
     <span>Todo</span>
     <img [src]="mode[modeSelected].img_switch" (click)="changeMode()">
   </div>

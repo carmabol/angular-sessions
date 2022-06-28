@@ -72,6 +72,16 @@
       margin: 5px;
       border: 1px dotted black;
     }
+
+    .todoImageLightDesktop{ 
+      background-image: url('../../assets/images/bg-desktop-light.jpg');
+      background-color: var(--Check_Background);
+    }
+
+    .todoImageDarkDesktop{
+      background-image: url('../../assets/images/bg-desktop-dark.jpg');
+      background-color: #000
+    }
 /*--Align-itemns*/
     .justify.space-between {
       justify-content: space-between;

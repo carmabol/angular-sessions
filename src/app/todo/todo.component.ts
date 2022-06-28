@@ -10,10 +10,11 @@ export class TodoComponent implements OnInit {
   mode=[
     { 
       img_switch:'../../assets/images/icon-sun.svg',
-
+      img_bg:"../../assets/images/bg-desktop-light.jpg"
     },
     {
       img_switch:'../../assets/images/icon-moon.svg',
+      img_bg:"../../assets/images/bg-desktop-dark.jpg"
     }];
   
   items=[
@@ -49,13 +50,8 @@ export class TodoComponent implements OnInit {
 
   }
 
-  getItemsLeft(){
-    let count=this.items.length;
-    for (const iterator of this.items) {
-      if(iterator.isComplete)
-        count--;
-    }
-    return count;
+  getItemsLeft() {
+    return this.items.filter(item => !item.isComplete).length;
   }
 
   changeMode(){
