@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 0px; /*Estas medidas pueden variar al igual que las de width y height. Desde la izquierda: top, right, bottom, right*/
+}
+
+.header_app{
+    height:30vh;
+    width:100%;margin: 0px;
+     padding: 0px;
+      border:0px;
+      background-color:blue;
+      background-image: url('../assets/images/bg-desktop-dark.jpg');
+      display:flex;
+      justify-content: center;
+      text-align: center;
+}
+
+.background_app {
+    height:70vh;
+    width:100%;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    border:0px;
+}
+
+.main_content{
+        position:absolute;
+        top:20vh;
+        left: 30%; 
+        width: 40%; 
+        color: aquamarine;
+}
+
+.title_content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form_content{
+    text-align: left;
+    background-color: darkslategrey;
+}
+
+.todoList_content{
+    text-align: center;
+}
+
+.actions_content{
+    text-align: center;
+}

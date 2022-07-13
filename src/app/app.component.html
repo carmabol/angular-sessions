@@ -1,2 +1,26 @@
-<app-todo></app-todo>
+<div class="container">
+    <div class="header_app">      
+    </div>
+    <div class="background_app">
+    </div>
+    <div class="main_content">
+        <div class="title_content">
+            <span>TODO</span> 
+            <!-- [ngClass]="{'todoImageDarkDesktop': modeSelected===1, 'todoImageLightDesktop': modeSelected===0 }" -->
+            <app-visual-mode></app-visual-mode>
+        </div>
+        <div class="form_content">
+            <app-form-todo></app-form-todo>
+        </div>
+        <div class="todoList_content">
+            <app-list-todo></app-list-todo>
+        </div>
+        <div class="actions_content">
+            <app-actions-todo></app-actions-todo>    
+        </div>
+    </div>
+</div>
+
+
+<!-- <app-todo></app-todo> -->
 <!-- <router-outlet></router-outlet>-->

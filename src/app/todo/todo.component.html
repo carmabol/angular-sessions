@@ -1,33 +1,35 @@
-  <div class="todo">
+  <div [ngClass]="modeSelected===0 ? 'todo_dark' : 'todo_light' ">
 
-  <div>
-    <div>Todo</div>
-    <div><img [src]="mode[modeSelected].img_switch"></div>
+  <div class="container center-screen" [ngClass]="{'todoImageDarkDesktop': modeSelected===1, 'todoImageLightDesktop': modeSelected===0 }">
+    <span>Todo</span>
+    <img [src]="mode[modeSelected].img_switch" (click)="changeMode()">
   </div>
      
-  <div>
-    <input type="checkbox" name="" id="">
-    <input type="text" placeholder="Digit a new work todo">
-  </div>
-
-    <div *ngFor="let item of items">
-      <input type="checkbox" name="" id="" [checked]="item.isComplete">
-      <input type="text" readonly [value]="item.description">
+  <div class="container center-screen column">
+    <div>
+      <input type="checkbox" name="" id="">
+      <input type="text" placeholder="Digit a new work todo">
     </div>
 
-<div class="attribution">
-  <div>{{getItemsLeft()}} items left</div>
-  <div><a>All</a></div>
-  <div>Active </div>
-  <div>Completed</div>
-  <div>Clear Completed</div>
+      <div *ngFor="let item of items">
+        <input type="checkbox" name="" id="" [checked]="item.isComplete">
+        <input type="text" readonly [value]="item.description">
+      </div>
+  </div>
+  
+<div class="attribution container">
+  <div class="item1">{{getItemsLeft()}} items left</div>
+  <div class="item2"><a>All</a></div>
+  <div class="item3">Active </div>
+  <div class="item4">Completed</div>
+  <div class="item5">Clear Completed</div>
 </div>
 
 
   Drag and drop to reorder list
 </div>
-  <div class="attribution">
+<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">@carmabol</a>.
-  </div>
+</div>
 

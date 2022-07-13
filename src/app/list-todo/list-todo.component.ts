@@ -1,22 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.scss']
+  selector: 'app-list-todo',
+  templateUrl: './list-todo.component.html',
+  styleUrls: ['./list-todo.component.scss']
 })
-export class TodoComponent implements OnInit {
-  modeSelected=0;
-  mode=[
-    { 
-      img_switch:'../../assets/images/icon-sun.svg',
-      img_bg:"../../assets/images/bg-desktop-light.jpg"
-    },
-    {
-      img_switch:'../../assets/images/icon-moon.svg',
-      img_bg:"../../assets/images/bg-desktop-dark.jpg"
-    }];
-  
+export class ListTodoComponent implements OnInit {
+
   items=[
     {
       isComplete:true,
@@ -44,18 +34,10 @@ export class TodoComponent implements OnInit {
     },
 
   ]
+
   constructor() { }
 
   ngOnInit(): void {
-
-  }
-
-  getItemsLeft() {
-    return this.items.filter(item => !item.isComplete).length;
-  }
-
-  changeMode(){
-    this.modeSelected=(this.modeSelected===0?1:0);
   }
 
 }
